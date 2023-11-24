@@ -1,0 +1,36 @@
+npm i eslint vite-plugin-eslint eslint-config-react-app --save-dev
+npm i react-router-dom
+
+
+
+**********we use this to configure eslint in this project*******************
+
+2-create .eslintrc.json file
+{
+    "extends":"react-app"
+}
+
+
+3-in vite.config
+
+import eslint from "vite-plugin-eslint";
+
+then we add eslint to plugins array
+
+plugins: [react(),eslint()]
+
+************to make waring to apear like warning not error*****************
+
+in the .eslintrc.cjs file add in the rules array
+
+//disable warning to become error
+"react/no-unescaped-entities": "off",
+
+"react/prop-types": "off",
+
+"no-unused-vars": ["warn", {"vars": "local", "args": "none"}],
+
+******************************************************************************
+
+to start app: npm run dev
+
